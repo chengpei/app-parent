@@ -1,10 +1,7 @@
 package com.whpe.controller;
 
-import com.whpe.bean.Result;
-import com.whpe.utils.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,12 +29,5 @@ public class UploadFileController extends CommonController{
         result.put("fileName", randomFileName);
 
         return result;
-    }
-
-    @RequestMapping(value = "/fileupload/http", method = RequestMethod.POST)
-    @ResponseBody
-    public Result http(@RequestBody Person person){
-        logger.info(person);
-        return new Result(true, "请求成功！");
     }
 }
