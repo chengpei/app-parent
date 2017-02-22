@@ -12,7 +12,7 @@
 		</commentGenerator>
 		    		
 		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.100.240:1521:orcl"
-			userId="sys as sysdba" password="whpe0213" />
+			userId="yzx" password="whpe0213" />
 		
 		<javaTypeResolver >
 		          <property name="forceBigDecimals" value="false" />
@@ -31,23 +31,9 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		
-		
-		<!--<table tableName="business_district"-->
-			<!--enableCountByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"-->
-			<!--enableUpdateByExample="false" enableDeleteByExample="false"-->
-			<!--/>-->
-		<!--<table tableName="business_district_coordinate"-->
-			<!--enableCountByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"-->
-			<!--enableUpdateByExample="false" enableDeleteByExample="false"-->
-			<!--/>-->
-		<!--<table tableName="business_district_department_rel"-->
-			<!--enableCountByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"-->
-			<!--enableUpdateByExample="false" enableDeleteByExample="false"-->
-			<!--/>-->
 
-		<table tableName="yzx.sys_model"
-			   enableCountByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"
-			   enableUpdateByExample="false" enableDeleteByExample="false"
+		<table tableName="sys_model" enableCountByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false" enableUpdateByExample="false" enableDeleteByExample="false"
 		/>
 	</context>
     

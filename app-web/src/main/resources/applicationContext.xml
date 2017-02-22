@@ -10,7 +10,11 @@
     </context:component-scan>
 
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="config.properties"/>
+        <property name="locations">
+            <array>
+                <value>classpath:config.properties</value>
+            </array>
+        </property>
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
 
