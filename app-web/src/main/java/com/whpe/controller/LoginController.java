@@ -21,6 +21,11 @@ public class LoginController extends CommonController{
         return "index";
     }
 
+    @RequestMapping("/login/toLogin")
+    public String toLogin(){
+        return "login";
+    }
+
     @RequestMapping("/login/doLogin")
     @ResponseBody
     public Result doLogin(){
