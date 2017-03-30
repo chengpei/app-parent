@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 @Controller
@@ -28,7 +29,7 @@ public class LoginController extends CommonController{
 
     @RequestMapping("/login/doLogin")
     @ResponseBody
-    public Result doLogin(){
+    public Result doLogin(HttpServletRequest request){
         loginService.doLogin();
         Result result = new Result(true, "登录成功");
         result.put("time", new Date());

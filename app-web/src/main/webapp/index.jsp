@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false" %>
 <html>
 <title>首页</title>
 <script src="${pageContext.request.contextPath}/js/jquery.1.9.1.min.js"></script>
@@ -7,7 +8,10 @@
 <script src="${pageContext.request.contextPath}/js/jquery.fileupload.js"></script>
 <body>
     <h2 onclick="sendPost();">Hello World!</h2>
-    <a href="/login/doLogin.do">登录</a>
+    <form id="logoutForm" action="/logout" method="post" style="display: none;">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    </form>
+    <a href="javascript:void(0);" onclick="$('#logoutForm').submit();">登出</a>
 
     <h2>图片异步上传Demo</h2>
     <input type="file" name="file" id="fileInput" data-url="${pageContext.request.contextPath}/fileupload/upload.do" multiple>
